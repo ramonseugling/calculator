@@ -1,11 +1,10 @@
-import React from 'react';
+import { Calculator } from "./components/Calculator";
+import "./styles/global.scss";
 
-function App() {
+export function App() {
   return (
     <div className="App">
-      <p>Calculator</p>
+      <Calculator />
     </div>
   );
 }
-
-export default App;

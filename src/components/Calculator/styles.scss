@@ -1,10 +1,38 @@
 .content {
   width: 400px;
-  border: 1px solid red;
+  border: 1px solid #000;
   max-width: 500px;
   height: 500px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  height: 100%;
+  width: 100%;
+}
+
+.operations {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    height: 100%x;
+    width: 90px;
+
+    & + button {
+      margin-top: 2px;
+    }
+  }
 }

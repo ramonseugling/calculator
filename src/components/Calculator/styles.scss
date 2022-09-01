@@ -1,38 +1,72 @@
 .content {
-  width: 400px;
-  border: 1px solid #000;
-  max-width: 500px;
-  height: 500px;
+  height: 600px;
+  width: 375px;
+  padding: 0;
+  background-color: #22252d;
+  border-radius: 1rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.numbers {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
-  height: 100%;
-  width: 100%;
-}
-
-button {
-  height: 100%;
-  width: 100%;
-}
-
-.operations {
-  height: 100%;
-  display: flex;
   flex-direction: column;
+}
+
+.result {
+  width: 100%;
+  height: 40%;
+  background-color: #22252d;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #f9f9fa;
+    font-size: 3rem;
+    direction: rtl;
+    caret-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0;
+  }
+}
+
+.keyboard {
+  background-color: #2a2d37;
+  width: 100%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 2rem 2rem 1rem 1rem;
 
   button {
-    height: 100%x;
-    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f9f9fa;
+    background-color: #272b33;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 
-    & + button {
-      margin-top: 2px;
+    transition: filter 0.2s;
+
+    svg {
+      color: #ca5c5e;
+    }
+
+    &:hover {
+      filter: contrast(0.9);
     }
   }
 }
